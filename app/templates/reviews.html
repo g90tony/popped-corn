@@ -1,0 +1,12 @@
+{% macro displayReviews(review_list) %}
+
+<!-- start of if block -->
+{% for review in review_list %}
+<div class="review-card">
+  <p class="my-0 font-weight-bold">{{ review.title}}</p>
+  <p class="my-1">{{ review.review | truncate(30) }}</p>
+</div>
+{% endfor %}
+<!-- end of if block -->
+
+{% endmacro %}

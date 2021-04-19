@@ -1,0 +1,44 @@
+.card-body {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-navbar {
+  background-color: #000;
+  color: #f7f7f7;
+}
+
+.movie-card {
+  background-color: #000;
+  color: #f7f7f7;
+  width: 200px;
+  min-height: 400px;
+  height: max-content;
+  margin: 20px;
+}
+
+.movie-card-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.movie-card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.movie-info-button {
+  color: #f7f7f7;
+  font-weight: 600;
+  text-decoration: none !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.movie-info-button:hover {
+  color: #f7f7f7;
+  text-decoration: none !important;
+  font-weight: 700;
+}

@@ -1,0 +1,17 @@
+<!-- Imports begin -->
+{% extends 'base.html'%} {% import 'movies.html' as macro%}
+
+<!-- index content begin -->
+{% block content %}
+<div class="container">
+  <div class="row my-3">
+    <div class="row">
+      <h3 class="font-weight-bolder h2">{{results | count }} movies found</h3>
+    </div>
+    <div class="row mx-auto justify-content-center">
+      {{ macro.displayMovieList(results)}}
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

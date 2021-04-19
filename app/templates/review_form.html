@@ -1,0 +1,14 @@
+{% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %}
+
+<!-- start of content block -->
+{% block content %}
+<div class="review-container container">
+  <div class="poster-column">
+    <img src="{{movie.poster}}" alt="{{movie.title}}" class="poster-image" />
+  </div>
+
+  <div class="form-column">{{ wtf.quick_form(review_form) }}</div>
+</div>
+
+{% endblock %}
+<!-- end of content block -->

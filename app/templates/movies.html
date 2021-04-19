@@ -1,0 +1,20 @@
+{% macro displayMovieList(movie_list) %} {% for movie in movie_list %}
+
+<div class="card movie-card rounded shadow border-0">
+  <img
+    class="card-img-top movie-card-image"
+    src="{{movie.poster}}"
+    alt="{{movie.title}} poster"
+  />
+  <div class="card-body">
+    <!-- <h4 class="card-title movie-card-title">{{ movie.title }}</h4> -->
+    <a
+      href="/movie/{{movie['id']}}"
+      class="w-100 mx-2 my-auto movie-info-button"
+    >
+      {{ movie.title}}</a
+    >
+  </div>
+</div>
+
+{% endfor %} {% endmacro %}

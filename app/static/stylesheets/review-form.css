@@ -1,0 +1,29 @@
+.review-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "poster form";
+}
+
+.poster-column {
+  grid-area: poster;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 75% !important;
+}
+
+.poster-image {
+  width: 90%;
+  margin: auto;
+}
+
+.form-column {
+  grid-area: form;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}

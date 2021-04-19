@@ -1,8 +1,13 @@
+import os
+
 class Config:
     '''
     General configuration parent class
     '''
     BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
+    API_BASE_URL ='https://api.themoviedb.org/3/movie/{}?api_key={}'
+    API_KEY = os.environ.get('API_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 
@@ -25,3 +30,9 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+    
+    
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}
