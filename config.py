@@ -7,6 +7,7 @@ class Config:
     BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
     API_KEY = os.environ.get('API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    DATABASE_URI = 'postgresql+psycopg2://caleb:admin@localhost/popped_corn'
 
 
 
