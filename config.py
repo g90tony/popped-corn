@@ -9,7 +9,9 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     DB_USERNAME = os.environ.get('DB_USERNAME')
     DB_PASSWORD = os.environ.get('DB_PASSWORD')
-    DATABASE_URI = 'postgresql+psycopg2://{}:{}@localhost/popped_corn'.format(DB_USERNAME, DB_PASSWORD)
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{}:{}@localhost/popped_corn'.format(DB_USERNAME, DB_PASSWORD)
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    
 
 
 
