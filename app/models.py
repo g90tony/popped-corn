@@ -39,6 +39,14 @@ class Review:
 
         return response
     
+class Role(db.model):
+    __tablename__ = 'roles'
+    
+    id = db.Column(db.Integer, primary_key = true)
+    name = db.Column(db.String(255))
+    
+    def __repr__(self):
+        return f'User {self.name}'
     
 class User (db.Model):
     __tablename__ = 'users'
