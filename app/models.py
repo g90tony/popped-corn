@@ -41,19 +41,20 @@ class Review:
 
         return response
     
-class Role(db.model):
+class Role(db.Model):
     __tablename__ = 'roles'
     
-    id = db.Column(db.Integer, primary_key = true)
+    id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(255))
     users = db.relationship('User', backref = 'role', lazy='dynamic')
     
     def __repr__(self):
         return f'User {self.name}'
     
-class User (db.Model):
+class User(db.Model):
     __tablename__ = 'users'
-    id= db.Column(db.String(255))
+    id= db.Column(db.Integer, primary_key = True)
+    username= db.Column(db.String(255))
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     
     def __repr__ (self):
